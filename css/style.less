@@ -1,0 +1,271 @@
+@primary-color: #f0f0f0;
+@secondary-color: #000;
+@accent-color: #fff;
+@hover-color: #333;
+@button-border-color: #000;
+
+body {
+  background-color: @primary-color;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 20px 40px; 
+}
+
+#logo {
+  font-size: 36px; 
+  text-transform: uppercase; 
+  font-weight: bold;
+}
+
+.menu * {
+  margin: 0;
+  padding: 0;
+}
+
+.menu ul {
+  list-style: none;
+}
+
+.menu > ul {
+  display: flex;
+  justify-content: center;
+}
+
+.menu > ul li a {
+  display: block;
+  padding: 20px 40px 20px 40px;
+  font-size: 15px;
+  color: @secondary-color;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.menu > ul li {
+  position: relative;
+}
+
+.menu > ul li > a i.fas {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  font-size: 17px;
+}
+
+.menu li a:hover {
+  background: @secondary-color;
+  color: @accent-color;
+  box-shadow: 1px 5px 10px -5px black;
+  transition: all 0.3s ease;
+}
+
+.menu li ul {
+  position: absolute;
+  min-width: 165px;
+  display: none;
+}
+
+.menu li > ul li a {
+  padding: 10px;
+  text-transform: none;
+  background: #e4e4e5;
+}
+
+.menu li > ul li ul {
+  position: absolute;
+  right: -165px;
+  top: 0;
+}
+
+.menu li:hover > ul {
+  display: block;
+}
+
+#menu a {
+  margin-right: 30px; 
+  color: @secondary-color;
+}
+
+#lang {
+  margin-left: auto; 
+}
+
+.firstsection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 650px;
+}
+
+.image-column1 {
+  width: 50%; 
+  text-align: center;
+}
+
+.text-column1 {
+  width: 50%; 
+  padding: 20px;
+}
+
+.image-column1 img {
+  width: 700px; 
+  height: auto; 
+  margin-left: auto; 
+}
+
+.secondsection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 750px;
+}
+
+.text-column2 {
+  width: 50%; 
+  padding: 20px;
+}
+
+.image-column2 {
+  width: 50%; 
+  text-align: right;
+}
+
+.image-column2 img {
+  width: 450px; 
+  height: auto; 
+  margin-left: auto; 
+}
+
+.thirdsection {
+  text-align: center; 
+  background-color: #F3F3F3; 
+}
+
+.text-column3 {
+  margin: 0 auto; 
+  max-width: 450px; 
+}
+
+.fourthsection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 750px;
+}
+
+.text-column4 {
+  width: 50%; 
+  padding: 20px;
+}
+
+.image-column3 {
+  width: 50%; 
+  text-align: center;
+}
+
+.image-column3 img {
+  width: 600px; 
+  height: auto; 
+  margin-left: auto; 
+}
+
+.footer {
+  color: @accent-color; 
+  padding: 20px; 
+  display: flex;
+  justify-content: space-around; 
+  height: 200px;
+}
+
+.footerr {
+  background-color: #333; 
+}
+
+.footer-column {
+  flex: 1 1 25%; 
+  padding: 0 10px;
+  text-align: left; 
+}
+
+.footer-column p {
+  margin: 5px 0; 
+}
+
+.footer-column h3 {
+  margin-bottom: 10px; 
+}
+
+.after_footer {
+  text-align: center; 
+  margin-top: 20px; 
+}
+
+.after_footer hr {
+  border: none;
+  border-top: 2px solid @accent-color; 
+  width: calc(100% - 20px); 
+  margin: 0 auto; 
+}
+
+.logo2 {
+  font-size: 24px; 
+  font-weight: bold; 
+  text-align: center;
+  color: @accent-color;
+  display: block; 
+  animation: colorChange 3s infinite;
+  
+  @keyframes colorChange {
+    0% {
+      color: @accent-color;
+    }
+    50% {
+      color: @hover-color; 
+    }
+    100% {
+      color: @accent-color;
+    }
+  }
+}
+
+.button {
+  font-size: 18px;
+  font-weight: 900;
+  width: 244px;
+  border: 2px solid @button-border-color;
+  padding: 15px 0;
+  background: @accent-color;
+  cursor: pointer;
+  letter-spacing: 0.13em;
+  margin-top: 4vh;
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    background: @button-border-color;
+    color: @accent-color;
+    transform: scale(1.1);
+  }
+}
+
+.image-column1 img,
+.image-column2 img,
+.image-column3 img {
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: scale(0.95);
+  }
+}
+
+h1, h2, h3 {
+  transition: color 0.3s ease;
+  
+  &:hover {
+    color: rgb(95, 96, 99); 
+  }
+}
